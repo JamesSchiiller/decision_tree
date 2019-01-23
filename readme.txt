@@ -1,5 +1,5 @@
-virtualenv -p python3.6 venv
-source venv/bin/activate
+$ virtualenv -p python3.6 venv
+$ source venv/bin/activate
 
 $ pip install Pillow
 
