@@ -5,10 +5,11 @@ $ pip install Pillow
 
 $ python 
 
+>>> import decision_tree
 >>> tree = decision_tree.buildtree(decision_tree.my_data)
-<decision_tree.decisionnode object at 0x10554e048>
-
->>> decision_tree.classify(['(direct)', 'USA', 'yes', 5], tree)
+>>> decision_tree.savetree(tree)
+>>> newtree = decision_tree.loadtree()
+>>> decision_tree.classify(['(direct)', 'USA', 'yes', 5], newtree)
 {'Basic': 4}
 
 >>> decision_tree.drawtree(tree, jpeg='treeview.jpg')

@@ -106,6 +106,7 @@ def getdepth(tree):
 
 
 from PIL import Image,ImageDraw
+import pickle
 
 def drawtree(tree,jpeg='tree.jpg'):
   w=getwidth(tree)*100
@@ -248,3 +249,14 @@ def buildtree(rows,scoref=entropy):
                         tb=trueBranch,fb=falseBranch)
   else:
     return decisionnode(results=uniquecounts(rows))
+
+def savetree(tree):
+  # save the model to disk
+  filename = 'finalized_model.sav'
+  pickle.dump(tree, open(filename, 'wb'))
+ 
+def loadtree():
+  # load the model from disk
+  filename = 'finalized_model.sav'
+  tree = pickle.load(open(filename, 'rb'))
+  return tree
