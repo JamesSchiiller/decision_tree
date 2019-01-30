@@ -1,21 +1,13 @@
+Installation
 $ virtualenv -p python3.6 venv
 $ source venv/bin/activate
-
 $ pip install Pillow
+$ python main.py
 
-$ python 
+Change main to your purpose
 
->>> import decision_tree
->>> tree = decision_tree.buildtree(decision_tree.my_data)
->>> decision_tree.savetree(tree)
->>> newtree = decision_tree.loadtree()
->>> decision_tree.classify(['(direct)', 'USA', 'yes', 5], newtree)
-{'Basic': 4}
+$ python main.py
 
->>> decision_tree.drawtree(tree, jpeg='treeview.jpg')
-treeview.jpg
-
->>> decision_tree.printtree(tree)
 0:google?
 3:21?
 {'Premium': 3}
