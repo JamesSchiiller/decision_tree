@@ -4,7 +4,7 @@ $ source venv/bin/activate
 $ pip install Pillow
 $ python main.py
 
-Change main to your purpose
+Change main for your particular purpose
 
 $ python main.py
 
